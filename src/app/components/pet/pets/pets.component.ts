@@ -5,7 +5,7 @@ import { Pet } from 'src/app/services/pet/pet';
 @Component({
   selector: 'app-pets',
   templateUrl: './pets.component.html',
-  styleUrls: ['./pets.component.css']
+  styleUrls: ['./pets.component.scss']
 })
 export class PetsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'color'];
