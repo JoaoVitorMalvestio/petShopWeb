@@ -8,7 +8,7 @@ import { Pet } from './pet';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "/api/v1/pets";
+const apiUrl = '/api/v1/pets';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ const apiUrl = "/api/v1/pets";
 export class PetService {
   constructor(private http: HttpClient) { }
 
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       // TODO: send the error to remote logging infrastructure
