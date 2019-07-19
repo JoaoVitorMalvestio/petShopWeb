@@ -45,7 +45,7 @@ export class PetService {
 
   addPet(pet: Pet): Observable<Pet> {
     return this.http.post<Pet>(apiUrl, pet, httpOptions).pipe(
-      tap((prod: Pet) => console.log(`added pet w/ id=${pet._id}`)),
+      tap((prod: Pet) => console.log(`added pet w/ id=${pet.id}`)),
       catchError(this.handleError<Pet>('addPet'))
     );
   }
