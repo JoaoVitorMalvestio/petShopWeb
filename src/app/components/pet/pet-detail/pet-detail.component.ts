@@ -9,7 +9,7 @@ import { Pet } from 'src/app/services/pet/pet';
   styleUrls: ['./pet-detail.component.scss']
 })
 export class PetDetailComponent implements OnInit {
-  pet: Pet = { id: '', name: '', color: '', updatedAt: null };
+  pet: Pet = { _id: '', name: '', color: '', updatedAt: null };
 
   isLoadingResults = true;
 

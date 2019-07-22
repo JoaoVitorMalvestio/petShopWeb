@@ -8,7 +8,7 @@ import { Pet } from './pet';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = '/api/v1/pets';
+const apiUrl = 'http://localhost:3000/api/v1/pets';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class PetService {
 
   addPet(pet: Pet): Observable<Pet> {
     return this.http.post<Pet>(apiUrl, pet, httpOptions).pipe(
-      tap((prod: Pet) => console.log(`added pet w/ id=${pet.id}`)),
+      tap((prod: Pet) => console.log(`added pet w/ id=${pet._id}`)),
       catchError(this.handleError<Pet>('addPet'))
     );
   }
